@@ -1,8 +1,8 @@
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
-import Auth from "./pages/auth/auth";
 import SetAvatar from "./pages/SetAvatar/SetAvatar";
 import Chat from "./pages/chat/Chat";
+import Auth from "./pages/auth/Auth";
 
 function App() {
   return (
