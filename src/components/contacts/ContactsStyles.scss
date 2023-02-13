@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+
+.contacts-container {
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  overflow: hidden;
+  background-color: $complement-1;
+  border-radius: 30px 0 0 30px;
+
+  // @media screen and (min-width: 720px) and (max-width: 1080px) {
+  //   gap: 0.5rem;
+  // }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 4rem;
+    }
+    h3 {
+      color: white;
+      text-transform: uppercase;
+      @media screen and (max-width: $largePhone) {
+        display: none;
+      }
+    }
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    gap: 0.8rem;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+
+      &-thumb {
+        background-color: $accent;
+        width: 0.1rem;
+        border-radius: 1rem;
+      }
+    }
+    .contact {
+      background-color: $complement-2;
+      // min-height: 5rem;
+      cursor: pointer;
+      width: 75%;
+      border-radius: 0.2rem;
+      // padding: 0.4rem;
+      display: flex;
+      gap: .7rem;
+      align-items: center;
+      transition: 0.5s ease-in-out;
+      @media screen and (max-width: $largePhone) {
+        flex-direction: column;
+        gap: 0;
+        justify-content: flex-start;
+      }
+
+      .avatar {
+        img {
+          height: 3rem;
+        }
+      }
+      .username {
+        h3 {
+          color: white;
+          @media screen and (max-width: $largePhone){
+            font-size: .6rem;
+          }
+        }
+      }
+    }
+
+    .selected {
+      background-color: $complement-5;
+    }
+  }
+  .current-user {
+    background-color: $complement-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    @media screen and (max-width: $largePhone){
+      flex-direction: column;
+      gap: 0;
+    }
+    .avatar {
+      img {
+        height: 4rem;
+        max-inline-size: 100%;
+        @media screen and (max-width: $largePhone){
+          height: 2.8rem;
+        }
+      }
+    }
+    .username {
+      h2 {
+        color: white;
+        @media screen and (max-width: $largePhone) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

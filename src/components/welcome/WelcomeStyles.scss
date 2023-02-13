@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  background-color: $complement-1;
+  border-radius:0 30px 30px 0;
+  text-align: center;
+  img {
+    height: 20rem;
+    @media screen and (max-width: $largePhone) {
+      height: 16rem;
+    }
+  }
+  span {
+    color: $accent;
+  }
+}
