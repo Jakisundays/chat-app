@@ -35,7 +35,8 @@ const DisplayChat = ({ currentChat, socket, currentUser }) => {
         });
         setMessages(response.data);
       } catch (error) {
-        console.error("Error in accessing messages.");
+        console.error("Error in accessing messages... Refreshing page...");
+        window.location.reload()
       }
     };
     getMessages();
