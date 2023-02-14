@@ -6,16 +6,19 @@
   align-items: center;
   padding: 0 1rem;
   gap: 10px;
+  @media screen and (max-width: $largePhone) {
+    padding: 0 0.3rem;
+  }
   .button-container {
     display: flex;
     align-items: center;
     color: white;
     gap: 1rem;
+    @media screen and (max-width: $largePhone) {
+      display: none;
+    }
     .emoji {
       position: relative;
-      @media screen and (max-width: $largePhone) {
-        display: none;
-      }
       svg {
         font-size: 1.9rem;
         color: #ffff00c8;
@@ -59,8 +62,8 @@
     border-radius: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    // gap: 1rem;
     background-color: #ffffff34;
     input {
       width: 87%;
@@ -72,6 +75,10 @@
       font-size: 1.2rem;
       @media screen and (max-width: $largePhone){
         width: 100%;
+        padding-left: 0.5rem;
+        &::placeholder{
+          font-size: 0.9rem;
+        }
       }
       &::selection {
         background-color: #9a86f3;
@@ -88,6 +95,9 @@
       align-items: center;
       background-color: #9a86f3;
       border: none;
+      @media screen and (max-width: $largePhone){
+        padding: 0.2rem 0.8rem;
+      }
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
         svg {

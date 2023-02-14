@@ -68,6 +68,9 @@
       .username {
         h3 {
           color: white;
+          @media screen and (max-width: $tablet){
+            font-size: 0.8rem;
+          }
           @media screen and (max-width: $largePhone){
             font-size: .5rem;
           }
