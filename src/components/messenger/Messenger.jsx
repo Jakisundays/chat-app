@@ -8,13 +8,13 @@ import { useEffect } from "react";
 const Messenger = ({ sendMsg }) => {
   const [msg, setMsg] = useState("");
   const [emojiMenu, setEmojiMenu] = useState(false);
-  const [phone, setPhone] = useState(false)
+  const [phone, setPhone] = useState(false);
 
   const addEmoji = (emojiObject) => {
-    // let message = msg;
+    let message = msg;
     const { emoji } = emojiObject;
-    // message += emojiObject.emoji;
-    setMsg(`${msg}${emoji}`);
+    message += emoji;
+    setMsg(message);
   };
 
   const sendChat = (e) => {
@@ -28,7 +28,7 @@ const Messenger = ({ sendMsg }) => {
       <div className="button-container">
         <div className="emoji">
           <BsEmojiSunglassesFill onClick={() => setEmojiMenu(!emojiMenu)} />
-          {emojiMenu && <Picker width={'50vw'} onEmojiClick={addEmoji} />}
+          {emojiMenu && <Picker width={"50vw"} onEmojiClick={addEmoji} />}
         </div>
       </div>
       <form className="input-container" onSubmit={(e) => sendChat(e)}>
