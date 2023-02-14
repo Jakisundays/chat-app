@@ -69,7 +69,10 @@
         h3 {
           color: white;
           @media screen and (max-width: $largePhone){
-            font-size: .6rem;
+            font-size: .5rem;
+          }
+          @media screen and (max-width: $smallPhone){
+            font-size: .4rem;
           }
         }
       }
@@ -102,7 +105,10 @@
       h2 {
         color: white;
         @media screen and (max-width: $largePhone) {
-          font-size: 1rem;
+          font-size: .6rem;
+        }
+        @media screen and (max-width: $smallPhone){
+          font-size: .4rem;
         }
       }
     }
