@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Buffer } from "buffer";
 import { authInstance } from "../../utils/APIRoutes";
 import { useNavigate } from "react-router-dom";
-import reload from "../../assets/reload.png";
 import "./SetAvatarStyles.scss";
 
 const SetAvatar = () => {
@@ -45,7 +44,6 @@ const SetAvatar = () => {
       }
     } catch (error) {
       console.log({ error });
-      // window.location.reload()
     }
     setAvatars(newAvatars);
     setIsLoading(false);

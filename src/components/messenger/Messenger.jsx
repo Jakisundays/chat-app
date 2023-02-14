@@ -9,15 +9,6 @@ const Messenger = ({ sendMsg }) => {
   const [msg, setMsg] = useState("");
   const [emojiMenu, setEmojiMenu] = useState(false);
   const [phone, setPhone] = useState(false)
-  const {innerWidth} = window
- 
-  useEffect(() => {
-    if(innerWidth <= '425px'){
-      setPhone(true)
-    }else{
-      setPhone(false)
-    }
-  },[innerWidth])
 
   const addEmoji = (emojiObject) => {
     // let message = msg;

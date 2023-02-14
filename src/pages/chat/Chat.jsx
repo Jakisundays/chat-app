@@ -50,7 +50,6 @@ const Chat = () => {
     if (currentUser) {
       //Connect with the server
       socket.current = io(URL);
-
       socket.current.emit("add-user", currentUser._id);
     }
   }, [currentUser]);
@@ -66,7 +65,11 @@ const Chat = () => {
         {!currentChat ? (
           <Welcome currentUser={currentUser} />
         ) : (
-          <DisplayChat currentUser={currentUser} currentChat={currentChat} socket={socket} />
+          <DisplayChat
+            currentUser={currentUser}
+            currentChat={currentChat}
+            socket={socket}
+          />
         )}
       </div>
     </section>

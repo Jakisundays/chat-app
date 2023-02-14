@@ -71,13 +71,13 @@ const DisplayChat = ({ currentChat, socket, currentUser }) => {
     //sending data to server - for the server to send message to data.to
     socket.current.emit("send-msg", data);
     try {
+      //Send message to Db to store messages
+      await messageInstance.post("/addmsg", data);
       //updating messages without making refresh
       setMessages((before) => [
         ...before,
         { fromSelf: true, message: msg, created: getDate() },
       ]);
-      //Send message to Db to store messages
-      await messageInstance.post("/addmsg", data);
     } catch (error) {
       console.error(
         "Error sending messages: An unknown error occurred. Please try again later."
